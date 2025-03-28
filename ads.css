@@ -1,0 +1,149 @@
+#p1{margin-left: 2%;
+    color:rgb(113, 55, 200) ;
+    font-size: 230%;
+    font-weight: 600;
+}
+p2{color: rgb(163, 35, 50);
+    margin-top: 50%;
+    font-size: 230%;
+    font-weight: 600;
+
+}
+p3{
+    color:rgb(113, 55, 200) ;
+    font-size: 160%;
+    font-weight: 500;
+}
+#top{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 3rem;
+}
+#header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 3rem;
+    margin-right: 2rem;
+    color: rgb(113, 55, 200);
+    cursor: pointer;
+}
+#twochoice{display: flex;
+    height: 5vw;
+    align-items: center;
+justify-content: flex-start;}
+#buttonsize{
+    width: 50%;
+}
+#Digital{
+    margin-top: 1%;
+    font-size: 2vw;
+    border: 1px solid black;
+    width:50vw;
+    cursor: pointer;
+    background-color: rgb(163, 35, 50);
+}
+#influencers{
+    margin-top: 1%;
+    font-size: 2vw;
+    border: 1px solid black;
+    width:50vw;
+    cursor: pointer;
+    background-color:rgb(113, 55, 200) ;
+
+}
+#digInflu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#platform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    display: none;
+}
+.influbutton{
+    padding: 1% 8%;
+    cursor: pointer;
+}
+#supmain{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#main{
+    color: rgb(97, 55, 249);
+    margin-left: 5%;
+    font-size: 200%;
+    font-weight: 600;
+}
+#sidemain{
+    color: rgb(163, 35, 50);
+    margin-right: 15%;
+    font-size: 150%;
+}
+#lastinfo{
+    border-radius: 20PX;
+    padding:6px 12px;
+    background-color: rgb(6, 0, 1) ;
+    border: 3px solid rgb(163, 35, 50) ;
+    color: rgb(163, 35, 50) ;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2%;
+    margin-right: 2%;
+
+}
+.data{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding:1vw;
+    width: 49vw;
+    height: 45vh;
+    border: 1px black solid;
+}
+
+  
+.material-icons{
+    width:8%;
+    color: rgb(113, 55, 200) ;
+}
+.datamaintext{
+    margin-top: 5px;
+    font-size: 1.5rem;
+    text-align:center;
+}
+.datatext{
+    display: flex;
+}
+#high{
+    width: 20vw;
+}
+.buy{
+    border-radius: 5px;
+    height: 2.5vw;
+    width: 100%;
+}
+#buydiv{
+    margin-top: 2vw;
+    align-content: center;
+}
+#a1{
+    text-decoration: none;
+}
+#a:hover{
+    background-color: rgb(247, 61, 61) ;
+}
+.buy:hover{
+    background-color: rgb(113, 55, 200) ;
+}
+.image{
+    height:20%;
+    width: 20vw;
+}

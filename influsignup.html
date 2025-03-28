@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Influencer Registration</title>
+    <link rel="stylesheet" href="influsignup.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Influencer Registration</h1>
+        <p>Fill in the details below to list your channel/page on BuyAdvertisement.com</p>
+        
+        <form id="influencer-form">
+            <div class="input-group">
+                <label for="channelLink">Channel/Page Link *</label>
+                <input type="text" id="channelLink" placeholder="Enter your channel/page link" required>
+                <button type="button" id="verifyLink">Verify</button>
+                <p id="linkMessage"></p>
+            </div>
+
+            <div id="extraFields" style="display: none;">
+                <div class="input-group">
+                    <label for="channelName">Channel/Page Name *</label>
+                    <input type="text" id="channelName" placeholder="Enter your channel/page name" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Platform *</label>
+                    <div class="radio-group">
+                        <input type="radio" name="platform" value="Telegram" required> Telegram
+                        <input type="radio" name="platform" value="Instagram" required> Instagram
+                        <input type="radio" name="platform" value="YouTube" required> YouTube
+                        <input type="radio" name="platform" value="Other" required> Other
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="keywords">Keywords (min. 3) *</label>
+                    <input type="text" id="keywords" placeholder="Enter keywords separated by commas" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="theme">Select Theme *</label>
+                    <select id="theme" required>
+                        <option value="">Select...</option>
+                        <option value="Tech">Tech</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Health">Health</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Education">Education</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="language">Select Language *</label>
+                    <input type="text" id="language" placeholder="Enter preferred language" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="description">Channel/Page Description *</label>
+                    <textarea id="description" placeholder="Describe your channel/page" required></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>Gender Ratio *</label>
+                    <input type="range" id="genderRatio" min="0" max="100" step="1" value="50">
+                    <p>Male: <span id="maleRatio">50</span>% | Female: <span id="femaleRatio">50</span>%</p>
+                </div>
+
+                <div class="input-group">
+                    <label for="pricing">Ad Format & Pricing *</label>
+                    <input type="text" id="pricing" placeholder="e.g., 1/24: $50, 2/24: $90" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const verifyBtn = document.getElementById("verifyLink");
+    const channelLinkInput = document.getElementById("channelLink");
+    const linkMessage = document.getElementById("linkMessage");
+    const extraFields = document.getElementById("extraFields");
+    const genderRatio = document.getElementById("genderRatio");
+    const maleRatio = document.getElementById("maleRatio");
+    const femaleRatio = document.getElementById("femaleRatio");
+    const form = document.getElementById("influencer-form");
+    
+    verifyBtn.addEventListener("click", function () {
+        const urlPattern = /^(https?:\/\/)?(www\.)?[a-zA-Z0-9-_.]+\.[a-zA-Z]{2,}.*$/;
+        if (urlPattern.test(channelLinkInput.value)) {
+            linkMessage.textContent = "Valid link!";
+            linkMessage.style.color = "green";
+            extraFields.style.display = "block";
+        } else {
+            linkMessage.textContent = "Invalid link. Please enter a valid URL.";
+            linkMessage.style.color = "red";
+            extraFields.style.display = "none";
+        }
+    });
+    
+    genderRatio.addEventListener("input", function () {
+        maleRatio.textContent = genderRatio.value;
+        femaleRatio.textContent = 100 - genderRatio.value;
+    });
+    
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        alert("Form submitted successfully!");
+    });
+});
+
+    </script>
+</body>
+</html>
